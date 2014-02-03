@@ -17,7 +17,7 @@ defmodule MyProject.Mixfile do
     #...
 
     defp deps do
-      [{:pnum, github: "adlawson/pnum", tag: "1.0.0-dev" }]
+      [{:pnum, github: "adlawson/pnum.ex", tag: "1.0.0-dev" }]
     end
 end
 ```
