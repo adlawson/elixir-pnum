@@ -27,6 +27,22 @@ defmodule Pnum do
     end
 
     @doc """
+    Filter the collection and map values in one pass.
+
+    ## Examples
+
+        iex> Pnum.filter_map([1, 2, 3], fn(x) -> rem(x, 2) == 0 end, &(&1 * 2))
+        [4]
+
+    """
+    @spec filter_map(t, (item -> as_boolean(term)), (item -> item)) :: list
+    def filter_map(collection, filter, mapper) do
+        process_many(collection, &({filter.(&1), mapper.(&1)}))
+        |> collect
+        |> filter_results
+    end
+
+    @doc """
     Returns a new collection, where each item is the result of invoking `func`
     on each corresponding item of `collection`.
 
