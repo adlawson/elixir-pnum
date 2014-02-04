@@ -83,6 +83,16 @@ but passing unit tests must be included before it will be considered for merge.
 $ mix test
 ```
 
+A basic Vagrant development VM is available at [adlawson/vagrantfiles][vagrantfile] for easy setup.
+```bash
+$ curl -O https://raw.github.com/adlawson/vagrantfiles/master/elixir/Vagrantfile
+$ vagrant up
+$ vagrant ssh
+...
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+$ cd /srv
+```
+
 
 ### License
 The content of this library is released under the **MIT License** by **Andrew Lawson**.<br/>
@@ -91,4 +101,5 @@ You can find a copy of this license in [`LICENSE`][license] or at http://opensou
 <!-- URLs -->
 [travis]: https://travis-ci.org/adlawson/pnum.ex
 [travis-master]: https://api.travis-ci.org/adlawson/pnum.ex.png?branch=master
-[license]: https://github.com/adlawson/pnum.ex/blob/master/LICENSE
+[vagrantfile]: https://github.com/adlawson/vagrantfiles
+[license]: /LICENSE
